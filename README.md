@@ -154,3 +154,57 @@ Business logic is kept inside the service while controllers only handle HTTP req
 - Protected routes prevent unauthorized access.
 - Pages remain intentionally simple to prioritize functionality over design.
 
+# Frontend Projects CRUD Setup
+
+## Project Setup
+- React + TypeScript using Vite
+- React Router DOM configured
+- Axios API service layer implemented
+- React Hook Form ready (for future enhancement)
+- React Toastify configured
+- JWT authentication already in place
+- Full CRUD flow introduced (Projects)
+
+## Features
+- View all projects for logged-in user
+- Create new projects
+- Edit existing projects
+- Delete projects
+- Inline form-based CRUD (single page approach)
+- Auto refresh after every operation
+- Toast notifications for feedback
+- Clean and minimal UI structure
+- Project Service Layer
+
+A centralized service handles all API communication:
+
+- getProjects() → Fetch all projects
+- createProject() → Create new project
+- updateProject(id) → Update existing project
+- deleteProject(id) → Remove project
+
+All requests use a shared Axios instance with authentication headers attached automatically.
+
+## Pages
+- Login
+- Signup
+- Dashboard
+- Projects (fully implemented CRUD)
+- Tasks (next implementation step)
+
+## UI Behavior
+- Users can add a project using title + description fields
+- Clicking Edit loads data into the form
+- Clicking Update Project saves changes
+- Clicking Delete removes project after confirmation
+Form resets after each successful operation
+- List updates automatically after every change
+Design Decisions
+- Single-page CRUD approach (no navigation between create/edit pages)
+- Local component state used for form handling
+- Backend interaction abstracted into service layer
+- Toast notifications used for user feedback
+- Simple UI prioritised over styling for assessment clarity
+- Projects are treated as the base entity for future Task relationships
+
+
