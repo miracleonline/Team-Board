@@ -7,8 +7,9 @@ import {
   deleteProject,
   getProjects,
   updateProject,
-  Project,
 } from "../services/project";
+
+import type { Project } from "../services/project";
 
 const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([]);

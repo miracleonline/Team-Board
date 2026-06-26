@@ -7,8 +7,9 @@ import {
   deleteTask,
   getTasks,
   updateTask,
-  Task,
 } from "../services/task";
+
+import type { Task } from "../services/task";
 
 import { getProjects } from "../services/project";
 
