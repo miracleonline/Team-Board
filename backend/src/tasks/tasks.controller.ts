@@ -13,7 +13,7 @@ import { TasksService } from './tasks.service';
 
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { GetUser } from '../auth/get-user.decorator';
-import { UserPayload } from '../auth/interfaces/user-payload.interface';
+import type { UserPayload } from '../auth/interfaces/user-payload.interface';
 
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';

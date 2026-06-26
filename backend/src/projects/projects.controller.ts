@@ -16,7 +16,7 @@ import { GetUser } from '../auth/get-user.decorator';
 
 import { CreateProjectDto } from './dto/create-project.dto';
 import { UpdateProjectDto } from './dto/update-project.dto';
-import { UserPayload } from '../auth/interfaces/user-payload.interface';
+import type { UserPayload } from '../auth/interfaces/user-payload.interface';
 
 @UseGuards(JwtAuthGuard)
 @Controller('projects')
