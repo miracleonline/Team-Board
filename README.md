@@ -109,3 +109,48 @@ Relationships are managed using MongoDB ObjectIds with Mongoose references.
 DTOs are used to validate all incoming request data before reaching the service layer.
 
 Business logic is kept inside the service while controllers only handle HTTP requests and responses.
+
+# Frontend Authentication Setup
+
+### Project Setup
+
+- React + TypeScript using Vite
+- React Router DOM configured
+- Axios configured
+- React Hook Form installed
+- React Toastify configured
+- JWT authentication flow started
+
+---
+
+## Features
+
+- User Signup
+- User Login
+- Authentication Context
+- Protected Routes
+- Automatic JWT attachment using Axios Interceptors
+- Logout
+- Toast Notifications
+- Basic responsive layout
+
+---
+
+## Pages
+
+- Login
+- Signup
+- Dashboard
+- Projects (placeholder)
+- Tasks (placeholder)
+
+---
+
+## Design Decisions
+
+- Context API is used for authentication state management.
+- Axios is centralized inside a single API service.
+- Authentication logic is separated into service files.
+- Protected routes prevent unauthorized access.
+- Pages remain intentionally simple to prioritize functionality over design.
+
