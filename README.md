@@ -207,4 +207,68 @@ Design Decisions
 - Simple UI prioritised over styling for assessment clarity
 - Projects are treated as the base entity for future Task relationships
 
+# Frontend Tasks CRUD Setup
+
+## Project Setup
+
+- Tasks CRUD system implemented on frontend
+- React + TypeScript using Vite
+- React Router DOM configured
+- Axios API service layer implemented
+- React Hook Form ready (for future enhancement)
+- React Toastify configured
+- JWT authentication already in place
+- Full CRUD flow introduced (Tasks)
+
+## Features
+
+- View all tasks for logged-in user
+- Create new tasks
+- Edit existing tasks
+- Delete tasks
+- Assign task to a project
+- Set task status (Todo / In Progress / Done)
+- Inline form-based CRUD (single page approach)
+- Auto refresh after every operation
+- Toast notifications for feedback
+- Clean and minimal UI structure
+
+## Task Service Layer
+A centralized service handles all API communication:
+
+- getTasks() → Fetch all tasks
+- createTask() → Create new task
+- updateTask(id) → Update existing task
+- deleteTask(id) → Remove task
+
+All requests use a shared Axios instance with authentication headers attached automatically.
+
+## Pages
+
+- Login
+- Signup
+- Dashboard
+- Projects
+- Tasks (fully implemented CRUD)
+
+## UI Behavior
+
+- Users can create a task using title + description
+- Task must be assigned to a project
+- Status can be selected (Todo / In Progress / Done)
+- Clicking Edit loads data into the form
+- Clicking Update Task saves changes
+- Clicking Delete removes task after confirmation
+- Form resets after each successful operation
+- List updates automatically after every change
+
+## Design Decisions
+
+- Single-page CRUD approach (no navigation between create/edit pages)
+- Local state used for form handling
+- Backend interaction abstracted into service layer
+- Toast notifications used for user feedback
+- Simple UI prioritised for assessment clarity
+- Tasks are linked to Projects using ObjectId relationships
+
 
