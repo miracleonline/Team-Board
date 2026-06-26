@@ -43,6 +43,13 @@ export class ProjectsService {
     return project;
   }
 
+  async findOwnedProject(projectId: string, userId: string) {
+    return this.projectModel.findOne({
+      _id: projectId,
+      owner: userId,
+    });
+  }
+
   async update(
         id: string,
         userId: string,

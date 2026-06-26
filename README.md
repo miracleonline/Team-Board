@@ -69,3 +69,43 @@ Users can only access their own projects.
 Ownership is enforced in the database queries rather than filtering after retrieval.
 
 Project validation uses DTOs and class-validator.
+
+# Task Management
+
+## Features Completed
+
+- Task Schema
+- Create Task
+- View Tasks
+- Update Task
+- Delete Task
+- Task Status (Todo, In Progress, Done)
+- Project ownership validation
+- JWT protected routes
+
+## Endpoints
+
+POST /tasks
+
+GET /tasks
+
+PATCH /tasks/:id
+
+DELETE /tasks/:id
+
+## Design Decisions
+
+Each task belongs to:
+
+- One project
+- One authenticated user
+
+A user cannot create a task inside a project they do not own.
+
+Task status is implemented using an enum for consistency and validation.
+
+Relationships are managed using MongoDB ObjectIds with Mongoose references.
+
+DTOs are used to validate all incoming request data before reaching the service layer.
+
+Business logic is kept inside the service while controllers only handle HTTP requests and responses.
